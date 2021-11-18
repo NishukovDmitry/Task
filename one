@@ -1,0 +1,14 @@
+# stor = dict([input('Введите дату и задачу:').split() for _ in range(3)])
+# print(stor)
+
+Data = input("Введите дату:")
+Task = input("Введите задачу:")
+Data1 = input("Введите дату:")
+Task1 = input("Введите задачу:")
+Data2 = input("Введите дату:")
+Task2 = input("Введите задачу:")
+
+
+print(Data, " ", Task, 
+'\n', Data1, " ", Task1,
+'\n', Data2, " ", Task2)
