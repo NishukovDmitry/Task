@@ -33,9 +33,12 @@ def add(message):
     command = message.text.split(maxsplit=2)
     date = command[1].lower()
     task = command[2]
-    add_todo(date, task)
-    text = "Задача " + task + " добавленна на дату " + date
-    bot.send_message(message.chat.id, text)
+    if len(task) < 3:
+        bot.send_message(message.chat.id, "Error")
+    else:
+        add_todo(date, task)
+        text = "Задача " + task + " добавленна на дату " + date
+        bot.send_message(message.chat.id, text)
 
 @bot.message_handler(command=["random"])
 def random_add(message):
